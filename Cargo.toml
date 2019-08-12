@@ -1,0 +1,15 @@
+[package]
+name = "cylon_ast"
+version = "0.1.0"
+authors = ["Matrixmage <osmithsi@sfu.ca>"]
+edition = "2018"
+
+repository = "https://github.com/Jerald/cylon_ast"
+license = "MIT"
+description = "Simple Cylon AST implementation allow for easy exporting with serde. For the Yolol language in the upcoming game Starbase."
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = { version = "1.0.94", features = ["derive"] }
+serde_json = "1.0.40"
