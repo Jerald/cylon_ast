@@ -23,7 +23,7 @@ macro_rules! boxed_try_from_impl {
             where
                 $t: TryInto<$g>
             {
-                type Error = <$t as TryFrom>::Error;
+                type Error = <$t as TryInto<$g>>::Error;
 
                 fn try_from(boxed: Box<$t>) -> Result<Box<$g>, Self::Error>
                 {
