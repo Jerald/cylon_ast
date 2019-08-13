@@ -1,5 +1,3 @@
-use crate::ast::*;
-
 #[macro_export]
 macro_rules! boxed_conversion_impl {
     ( $(From<Box<$t:ty>> for Box<$g:ty>);+ ) => {
