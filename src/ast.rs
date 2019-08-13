@@ -25,6 +25,9 @@ impl Root
     }
 }
 
+// Implement general conversion helpers from common patterns such as boxes.
+// Look into using macros for this, like the ref implementer for `yolol_number`.
+
 impl Default for Root
 {
     fn default() -> Self

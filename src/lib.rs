@@ -1,7 +1,19 @@
-mod cylon_ast;
+pub mod ast;
 
-pub use cylon_ast::Root;
-pub use cylon_ast::Program;
-pub use cylon_ast::Line;
-pub use cylon_ast::Statement;
-pub use cylon_ast::Expression;
+#[macro_use]
+mod utils;
+
+/// The root of a Cylon AST
+pub use ast::Root       as CylonRoot;
+
+/// The program represented by the Cylon AST
+pub use ast::Program    as CylonProg;
+
+/// A line in the program
+pub use ast::Line       as CylonLine;
+
+/// A statement in a line
+pub use ast::Statement  as CylonStat;
+
+/// An expression in a statement
+pub use ast::Expression as CylonExpr;
