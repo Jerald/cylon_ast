@@ -1,6 +1,6 @@
 [package]
 name = "cylon_ast"
-version = "0.3.1"
+version = "0.3.2"
 authors = ["Matrixmage <osmithsi@sfu.ca>"]
 edition = "2018"
 
