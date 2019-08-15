@@ -2,7 +2,7 @@ use std::collections::HashMap;
 
 use serde::{Serialize, Deserialize};
 
-const CYLON_AST_VERSION: &str = "1.0.0";
+const CYLON_AST_VERSION: &str = "0.3.0";
 
 #[derive(Serialize, Deserialize)]
 #[serde(rename = "root")]
