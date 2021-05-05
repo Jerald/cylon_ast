@@ -4,7 +4,7 @@ use serde::{Serialize, Deserialize};
 
 const CYLON_AST_VERSION: &str = "0.3.0";
 
-#[derive(Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename = "root")]
 #[serde(rename_all = "lowercase")]
 pub struct Root
@@ -45,7 +45,7 @@ impl Default for Root
     }
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename = "program")]
 #[serde(rename_all = "lowercase")]
 #[serde(tag = "type")]
@@ -54,7 +54,7 @@ pub struct Program
     pub lines: Vec<Line>
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename = "line")]
 #[serde(rename_all = "lowercase")]
 #[serde(tag = "type")]
@@ -64,7 +64,7 @@ pub struct Line
     pub code: Vec<Statement>
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "lowercase")]
 #[serde(tag = "type")]
 pub enum Statement
@@ -82,7 +82,7 @@ pub enum Statement
     Expression { expression: Expression }
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "lowercase")]
 #[serde(tag = "type")]
 pub enum Expression
